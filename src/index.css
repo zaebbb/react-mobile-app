@@ -1,13 +1,210 @@
-body {
+/*@import url('./fonts/mont.ttf');*/
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  box-sizing: border-box;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  transition: 0.5s;
+}
+body{
+  min-height: 100vh;
+}
+h1,h3,p,a{
+  font-family: 'Montserrat';
+}
+img{
+  width: 100%;
+}
+i{
+  font-family: FontAwesome;
+}
+.nav{
+  width: 100%;
+  background: #484545;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav .logo a{
+  font-size: 30px;
+  color: #fff;
+}
+.nav .menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+.nav .menu span{
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  margin: 5px;
+  height: 3px;
+  border-radius: 30px;
+  background: #fff;
+  color: #fff;
+}
+main{
+  padding: 20px;
+}
+main h1{
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+main h3{
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.cards .card{
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #484545;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 300px;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.cards .card .head_card{
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.cards .card img{
+  height: 100%;
+}
+.btns .btn{
+  color: #484545;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #484545;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  margin-bottom: 10px;
+}
+.btns .btn:last-child{
+  margin-bottom: 20px;
+}
+.footer{
+  background: #484545;
+  padding: 20px 40px;
+  position: relative;
+}
+.footer .logo{
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  margin-bottom: 20px;
+}
+.footer ul li{
+  margin-bottom: 15px;
+}
+.footer ul li:last-child{
+  margin-bottom: 0;
+}
+.footer ul li a{
+  color: #fff;
+  font-size: 24px;
+}
+.modal{
+  position: fixed;
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  bottom: 0;
+  top: 0;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: -10%;
+
+  visibility: hidden;
+  opacity: 0;
+}
+.modal .logo{
+  display: inline-block;
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.modal ul li{
+  margin-bottom: 10px;
+  text-align: center;
+}
+.modal ul li a{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+}
+.modal.active{
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}
+.form input{
+  max-width: 500px;
+  width: 100%;
+  color: #484545;
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: 1px solid #484545;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  background: transparent;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.form input::placeholder{
+  color: #484545;
+}
+.card_content{
+  padding: 25px;
+  font-size: 20px;
+  line-height: 26px;
+  border-top: 1px solid #484545;
+  color: #484545;
+}
+.head_card p{
+  color: #484545;
+}
+.vkl{
+  padding: 10px 40px;
+  border: 1px solid #484545;
+  font-size: 20px;
+  border-radius: 8px;
+}
+.btn-vks{
+  padding: 8px 8px 8px 25px !important;
+  vertical-align: middle;
+}
+.btn-vks p:first-child{
+  transform: translateY(13px);
+}
+.vkl.active{
+  background: #484545;
+  color: #fff;
+}
+.center_content{
+  display: flex;
+  justify-content: center !important;
 }
